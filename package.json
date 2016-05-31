@@ -1,0 +1,29 @@
+{
+  "name": "pokedex",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maggientc/pokedex.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/maggientc/pokedex/issues"
+  },
+  "homepage": "https://github.com/maggientc/pokedex#readme",
+  "dependencies": {
+    "angular": "^1.5.6",
+    "bootstrap": "^3.3.6",
+    "express": "^4.13.4"
+  },
+  "devDependencies": {
+    "angular-ui-router": "^0.3.0",
+    "glup": "^1.0.3",
+    "gulp-sass": "^2.3.1"
+  }
+}
