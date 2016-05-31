@@ -23,7 +23,7 @@
   },
   "devDependencies": {
     "angular-ui-router": "^0.3.0",
-    "glup": "^1.0.3",
+    "gulp": "^3.9.1",
     "gulp-sass": "^2.3.1"
   }
 }
