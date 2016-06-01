@@ -6,6 +6,6 @@ var pokedex = angular.module('pokedex', ['ui.router'])
         $stateProvider.state('home', {
             url: '/',
             templateUrl: '/views/pokedexView.html',
-            controller: 'PokedexController'
+            controller: 'PokedexController as pokedex'
         });
     });

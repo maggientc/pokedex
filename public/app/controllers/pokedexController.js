@@ -1,4 +1,6 @@
 pokedex.controller('PokedexController', function($log, PokedexService) {
-    var res = PokedexService.getAll();
-    $log.log(res);
+    var pokedex = this;
+
+    pokedex.imgUrl = "assets/img/";
+    pokedex.list = PokedexService.getAll();
 });

@@ -1,0 +1,18 @@
+$font-stack:    Helvetica, sans-serif;
+$border-color: gray;
+
+div.pokedexBox {
+    border-radius: 2em; /* Android 2.1+, Chrome, Firefox 4+, IE 9+, iOS 4+, Opera 10.50+, Safari 5+ */
+    background-clip: padding-box; /* Android 2.2+, Chrome, Firefox 4+, IE 9+, iOS 4+, Opera 10.50+, Safari 4+ */
+    border: 2px solid $border-color;
+    margin: 1em;
+    padding: 1em;
+
+    ul {
+        min-height: 3em;
+    }
+
+    img {
+        width: 100%;
+    }
+}
