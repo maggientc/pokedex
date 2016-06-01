@@ -1,13 +1,14 @@
 <div class="container">
     <h1>list</h1>
+    <div><input type="text" class="form-control" placeholder="Search" ng-model="searchText"/></div>
     <div class="row">
-        <div class="col-lg-3 col-md-4 col-sm-6" ng-repeat="item in pokedex.list">
+        <div class="col-lg-3 col-md-4 col-sm-6" ng-repeat="item in pokedex.list | filter:searchText">
             <div class="pokedexBox">
                 <img ng-src="{{pokedex.imgUrl + item.image}}" />
-                <div>{{item.id}} - {{item.name}}</div>
-                <ul>
-                    <li ng-repeat="type in item.type">{{type}}</li>
-                </ul>
+                <div>{{item.id | pokedexId}} - {{item.name}}</div>
+                <div>
+                    <span role="type" ng-repeat="type in item.type" class="{{type}}">{{type}}</span>
+                </div>
             </div>
         </div>
     </div>
