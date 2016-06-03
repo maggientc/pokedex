@@ -1,12 +1,7 @@
-$font-stack: Helvetica, sans-serif;
-$border-color: gray;
-
-$types:(
-    grass: #8cff66,
-    poison: #cc66ff,
-    fire: #ff6666
-);
-
+$font-stack: Helvetica,
+sans-serif;
+$border-color: #e6e6e6;
+$types:( grass: #8cff66, poison: #cc66ff, fire: #ff6666);
 div.pokedexBox {
     border-radius: 2em;
     /* Android 2.1+, Chrome, Firefox 4+, IE 9+, iOS 4+, Opera 10.50+, Safari 5+ */
@@ -15,24 +10,29 @@ div.pokedexBox {
     border: 2px solid $border-color;
     margin: 1em;
     padding: 1em;
-
     div {
         padding: 0.5em;
     }
     img {
         width: 100%;
-    }
-    span[role=type] {
-        border-radius: 0.5em;
-        /* Android 2.1+, Chrome, Firefox 4+, IE 9+, iOS 4+, Opera 10.50+, Safari 5+ */
-        background-clip: padding-box;
-        /* Android 2.2+, Chrome, Firefox 4+, IE 9+, iOS 4+, Opera 10.50+, Safari 4+ */
-        margin-right: 1em;
-        padding: 0.3em 1em;
-    }
-    @each $type, $typeColor in $types {
-        span.#{$type} {
-            background: $typeColor;
+        &:hover {
+            background: $border-color;
         }
+    }
+}
+
+span[role=type] {
+    border-radius: 0.5em;
+    /* Android 2.1+, Chrome, Firefox 4+, IE 9+, iOS 4+, Opera 10.50+, Safari 5+ */
+    background-clip: padding-box;
+    /* Android 2.2+, Chrome, Firefox 4+, IE 9+, iOS 4+, Opera 10.50+, Safari 4+ */
+    margin-right: 1em;
+    padding: 0.3em 1em;
+}
+
+@each $type,
+$typeColor in $types {
+    span.#{$type} {
+        background: $typeColor;
     }
 }

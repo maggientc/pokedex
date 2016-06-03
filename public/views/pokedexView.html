@@ -7,7 +7,7 @@
     <div class="row">
         <div class="col-lg-3 col-md-4 col-sm-6" ng-repeat="item in pokedex.list | filter:pokedex.filterFunction(searchText)">
             <div class="pokedexBox">
-                <img ng-src="{{pokedex.imgUrl + item.image}}" />
+                <a href="detail/{{item.name | lowercase}}"><img ng-src="{{pokedex.imgUrl + item.image}}" /></a>
                 <div>{{item.id | pokedexId}} - {{item.name}}</div>
                 <div>
                     <span role="type" ng-repeat="type in item.type" class="{{type}}">{{type}}</span>
