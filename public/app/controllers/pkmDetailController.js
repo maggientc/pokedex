@@ -1,5 +1,5 @@
-pokedex.controller('PkmDetailController', function($log, $stateParams) {
+pokedex.controller('PkmDetailController', function($log, $stateParams, PokedexService) {
     var pkm = this;
-
-    pkm.name = $stateParams.pkmName
+    pkm.imgUrl = PokedexService.imgUrl;
+    pkm.data = PokedexService.getByName($stateParams.pkmName);
 });

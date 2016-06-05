@@ -36,3 +36,12 @@ $typeColor in $types {
         background: $typeColor;
     }
 }
+
+div.pkmDetail {
+    div {
+        padding: 1em;
+    }
+    img {
+        margin:0 auto;
+    }
+}

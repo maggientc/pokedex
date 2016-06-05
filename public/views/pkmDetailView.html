@@ -1,3 +1,32 @@
 <div class="container">
-    <h1>detail</h1>
+    <h1>Detail</h1>
+    <div class="row">
+        <nav>
+            <ul class="pager">
+                <li ng-if="pkm.data.link.prev" class="previous">
+                    <a href="detail/{{pkm.data.link.prev | lowercase}}">
+                        <span aria-hidden="true">&larr;</span> {{pkm.data.id-1 | pokedexId}} - {{pkm.data.link.prev | pokedexName}}
+                    </a>
+                </li>
+                <li ng-if="pkm.data.link.next" class="next">
+                    <a href="detail/{{pkm.data.link.next | lowercase}}">
+                        {{pkm.data.id+1 | pokedexId}} - {{pkm.data.link.next | pokedexName}} <span aria-hidden="true">&rarr;</span></span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <div class="row pkmDetail">
+        <div class="col-sm-5 col-md-4">
+            <img ng-src="{{pkm.imgUrl + pkm.data.image}}" class="img-responsive" />
+        </div>
+        <div class="col-sm-7 col-md-6">
+            <div>
+                <h2>{{pkm.data.id | pokedexId}} - {{pkm.data.name}}</h2></div>
+            <div><span role="type" ng-repeat="type in pkm.data.type" class="{{type}}">{{type}}</span></div>
+            <div>
+                <p>{{pkm.data.description}}</p>
+            </div>
+        </div>
+    </div>
 </div>

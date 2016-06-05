@@ -13,3 +13,7 @@ span.grass { background: #8cff66; }
 span.poison { background: #cc66ff; }
 
 span.fire { background: #ff6666; }
+
+div.pkmDetail div { padding: 1em; }
+
+div.pkmDetail img { margin: 0 auto; }
