@@ -6,7 +6,12 @@ var app = express();
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.static(path.join(__dirname, 'node_modules')));
 
-app.all('/', function(req, res) {
+/*app.all('/', function(req, res) {
+    res.sendFile(path.join(__dirname, 'public/views/index.html'));
+});*/
+
+app.use(function(req, res) {
+    // Use res.sendfile, as it streams instead of reading the file into memory.
     res.sendFile(path.join(__dirname, 'public/views/index.html'));
 });
 
