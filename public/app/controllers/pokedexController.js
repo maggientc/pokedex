@@ -1,14 +1,24 @@
-pokedex.controller('PokedexController', function($log, PokedexService) {
-    var pokedex = this;
+(function() {
+    'use strict';
 
-    pokedex.imgUrl = PokedexService.imgUrl;
+    angular
+        .module('pokedex')
+        .controller('PokedexController', PokedexController);
 
-    pokedex.list = PokedexService.getAll();
+    PokedexController.$inject = ['$log', 'PokedexService'];
 
-    pokedex.filterFunction = function(searchText){
-        return function(item){
-            var patt = new RegExp(searchText, "i");
-            return patt.test(item.name) || patt.test(item.id) || patt.test(item.type); //search for name, id and type only
-        };
-    };
-});
+    function PokedexController($log, PokedexService) {
+        var pokedex = this;
+
+        pokedex.imgUrl = PokedexService.imgUrl;
+        pokedex.list = PokedexService.getAll();
+        pokedex.filterFunction = filterFunction;
+
+        function filterFunction(searchText) {
+            return function(item) {
+                var patt = new RegExp(searchText, "i");
+                return patt.test(item.name) || patt.test(item.id) || patt.test(item.type); //search for name, id and type only
+            };
+        }
+    }
+})();

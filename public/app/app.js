@@ -1,5 +1,11 @@
-var pokedex = angular.module('pokedex', ['ui.router'])
-    .config(function($stateProvider, $urlRouterProvider, $locationProvider) {
+(function() {
+'use strict';
+
+angular
+    .module('pokedex', ['ui.router'])
+    .config(config);
+
+    function config($stateProvider, $urlRouterProvider, $locationProvider) {
 
         $urlRouterProvider.otherwise('/');
         $locationProvider.html5Mode(true);
@@ -15,4 +21,5 @@ var pokedex = angular.module('pokedex', ['ui.router'])
             templateUrl: '/views/pkmDetailView.html',
             controller: 'PkmDetailController as pkm'
         });
-    });
+    }
+})();

@@ -5,12 +5,12 @@
             <ul class="pager">
                 <li ng-if="pkm.data.link.prev" class="previous">
                     <a href="detail/{{pkm.data.link.prev | lowercase}}">
-                        <span aria-hidden="true">&larr;</span> {{pkm.data.id-1 | pokedexId}} - {{pkm.data.link.prev | pokedexName}}
+                        <span aria-hidden="true">&larr;</span> {{pkm.data.id-1 | pokedexId}} - {{pkm.data.link.prev}}
                     </a>
                 </li>
                 <li ng-if="pkm.data.link.next" class="next">
                     <a href="detail/{{pkm.data.link.next | lowercase}}">
-                        {{pkm.data.id+1 | pokedexId}} - {{pkm.data.link.next | pokedexName}} <span aria-hidden="true">&rarr;</span></span>
+                        {{pkm.data.id+1 | pokedexId}} - {{pkm.data.link.next}} <span aria-hidden="true">&rarr;</span></span>
                     </a>
                 </li>
             </ul>
